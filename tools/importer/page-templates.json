@@ -98,6 +98,127 @@
           ]
         }
       ]
+    },
+    {
+      "name": "home",
+      "urls": [
+        "https://wknd-trendsetters.site/"
+      ],
+      "coverageGaps": [],
+      "description": "Homepage: hero, featured case study, image gallery, testimonials (tabs), latest articles cards, FAQ (accordion), and case study CTA",
+      "blocks": [
+        {
+          "name": "section-hero",
+          "instances": ["#main-content > header.section.secondary-section"],
+          "section": "secondary"
+        },
+        {
+          "name": "hero-blog",
+          "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"]
+        },
+        {
+          "name": "columns-featured",
+          "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"]
+        },
+        {
+          "name": "section-gallery",
+          "instances": ["#main-content > section.section.secondary-section:nth-of-type(2)"],
+          "section": "secondary"
+        },
+        {
+          "name": "cards-gallery",
+          "instances": ["#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-sm"]
+        },
+        {
+          "name": "tabs-testimonial",
+          "instances": ["#main-content > section.section:nth-of-type(3) .tabs-wrapper"]
+        },
+        {
+          "name": "section-articles",
+          "instances": ["#main-content > section.section.secondary-section:nth-of-type(4)"],
+          "section": "secondary"
+        },
+        {
+          "name": "cards-article",
+          "instances": ["#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-md"]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": ["#main-content > section.section:nth-of-type(5) .faq-list"]
+        },
+        {
+          "name": "hero-cta",
+          "instances": ["#main-content > section.section.inverse-section .grid-layout.desktop-1-column"],
+          "section": "inverse"
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["hero-blog"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Featured case study",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": ["columns-featured"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Image gallery",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": ["cards-gallery"],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) h2",
+            "#main-content > section.section.secondary-section:nth-of-type(2) .utility-text-align-center p"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Testimonials",
+          "selector": "#main-content > section.section:nth-of-type(3)",
+          "style": null,
+          "blocks": ["tabs-testimonial"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Latest articles",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(4)",
+          "style": "secondary",
+          "blocks": ["cards-article"],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) h2",
+            "#main-content > section.section.secondary-section:nth-of-type(4) .utility-text-align-center p"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "FAQ",
+          "selector": "#main-content > section.section:nth-of-type(5)",
+          "style": null,
+          "blocks": ["accordion-faq"],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(5) h2",
+            "#main-content > section.section:nth-of-type(5) .subheading"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Case study CTA",
+          "selector": "#main-content > section.section.inverse-section",
+          "style": "inverse",
+          "blocks": ["hero-cta"],
+          "defaultContent": []
+        }
+      ]
     }
   ]
 }
