@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-featured",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-19",
+  "sourceContext": {
+    "originUrl": "https://wknd-trendsetters.site/blog",
+    "originPage": "blog listing/landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "featured-article",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image column + text column (tag + date + heading + paragraph + CTA)",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured article highlights",
+      "image-and-text side-by-side promos",
+      "single spotlight items"
+    ],
+    "notSuitableFor": [
+      "repeating grids of items (use cards)",
+      "tabular data (use table)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/blog"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-19"
+  }
+}

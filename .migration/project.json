@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "eds-capstone-sudhansu": {
+      "previewOrg": "sudhansu-acharya",
+      "previewSite": "eds-capstone-sudhansu",
+      "contentHostUrl": "https://content.da.live/sudhansu-acharya/eds-capstone-sudhansu/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
