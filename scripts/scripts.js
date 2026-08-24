@@ -146,11 +146,43 @@ function decorateButtons(main) {
  * Decorates the main element.
  * @param {Element} main The main element
  */
+/**
+ * Applies section metadata: reads each `.section-metadata` block, applies its
+ * key/value pairs to the parent section (Style values become classes, others
+ * become data attributes) and removes the block. This project's aem.js ships a
+ * trimmed decorateSections that omits this step, so it is handled here.
+ * @param {Element} main The main element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll(':scope > .section > .section-metadata').forEach((meta) => {
+    const section = meta.closest('.section');
+    [...meta.children].forEach((row) => {
+      if (row.children.length < 2) return;
+      const key = row.children[0].textContent.trim().toLowerCase();
+      const valueEl = row.children[1];
+      if (key === 'style') {
+        valueEl.textContent.split(',').forEach((style) => {
+          const cls = style.trim().toLowerCase().replace(/[^0-9a-z]+/g, '-').replace(/(^-|-$)/g, '');
+          if (cls) section.classList.add(cls);
+        });
+      } else {
+        const dataKey = key.replace(/[^0-9a-z]+/g, '-').replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        section.dataset[dataKey] = valueEl.textContent.trim();
+      }
+    });
+    // remove the wrapper if the section-metadata was its only child
+    const wrapper = meta.parentElement;
+    meta.remove();
+    if (wrapper && wrapper !== section && wrapper.children.length === 0) wrapper.remove();
+  });
+}
+
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

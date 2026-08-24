@@ -1,47 +1,104 @@
-.hero-blog-container .hero-blog-wrapper {
-  max-width: unset;
-  padding: 0;
-}
+/* hero-blog -- 2-column editorial hero (text + image).
+   Shared by /faq (no CTAs, 2 paragraphs), /blog and /index (with CTAs).
+   Values extracted from https://wknd-trendsetters.site source computed styles.
+   Section background (#f5f5f5) and vertical padding come from .section.secondary
+   in styles.css, so this block only styles its own content. */
 
 .hero-blog {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: grid;
+  gap: 64px;
+  align-items: center;
 }
 
-.hero-blog h1,
-.hero-blog h2,
-.hero-blog h3,
-.hero-blog h4,
-.hero-blog h5,
-.hero-blog h6,
+/* DOM order is image (row 1) then text (row 2); source shows text first
+   (left on desktop, above on mobile), so pull the text cell in front. */
+.hero-blog > div:last-child {
+  order: -1;
+}
+
+/* --- Text --- */
+.hero-blog h1 {
+  margin: 0;
+  font-family: syncopate, var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30.8px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  color: #000;
+}
+
 .hero-blog p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  margin: 24px 0 0;
+  font-family: "instrument sans", var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+  color: #000;
 }
 
-.hero-blog.no-image * {
-  color: var(--text-color);
+/* FAQ body paragraph: a plain paragraph following another plain paragraph.
+   Excluded on blog/index where trailing paragraphs contain CTA links. */
+.hero-blog p + p:not(:has(a)) {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #404040;
 }
 
-.hero-blog picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
+/* --- CTAs (blog / index heroes only; FAQ has none) --- */
+.hero-blog p:has(> a:only-child) {
+  display: inline-flex;
+  margin: 32px 16px 0 0;
+}
+
+.hero-blog p:has(> a:only-child) > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  padding: 12px 24px;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  background-color: #000;
+  color: #fff;
+  font-family: "instrument sans", var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+/* Secondary CTA: any button paragraph after the first is outlined. */
+.hero-blog p:has(> a:only-child) ~ p:has(> a:only-child) > a {
+  background-color: #fff;
+  color: #000;
+}
+
+/* --- Image --- */
+.hero-blog picture {
+  display: block;
+  width: 100%;
 }
 
 .hero-blog img {
-  object-fit: cover;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
+/* --- Desktop: side-by-side columns --- */
 @media (width >= 900px) {
   .hero-blog {
-    padding: 40px 32px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-blog h1 {
+    font-size: 56px;
+    line-height: 61.6px;
+    letter-spacing: -1.12px;
   }
 }

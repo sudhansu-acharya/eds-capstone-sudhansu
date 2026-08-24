@@ -1,51 +1,74 @@
+/* columns-contact -- "Let's connect" contact section.
+   Values extracted from source computed styles (see migration-work). */
+
+/* Row: stacked on mobile */
 .columns-contact > div {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
 }
 
-.columns-contact img {
-  width: 100%;
-}
-
-.columns-contact > div > div {
-  order: 1;
-}
-
-.columns-contact > div > .columns-contact-img-col {
-  order: 0;
-}
-
-.columns-contact > div > .columns-contact-img-col img {
-  display: block;
-}
-
-/* Contact info column: stacked label/value entries */
-.columns-contact > div > div > div {
-  margin-bottom: 24px;
-}
-
-.columns-contact > div > div > div:last-child {
-  margin-bottom: 0;
-}
-
+/* Headings share the Syncopate uppercase treatment */
+.columns-contact h2,
 .columns-contact h3 {
-  margin: 0 0 4px;
+  font-family: syncopate, 'Roboto Condensed', roboto-condensed, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.columns-contact a {
+/* Left column heading */
+.columns-contact h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #000;
+  margin: 0;
+}
+
+/* Left column intro paragraph */
+.columns-contact > div > div:first-child p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #404040;
+  margin: 16px 0 0;
+}
+
+/* Right column: contact entry labels (Email / Phone / Address) */
+.columns-contact > div > div:last-child h3 {
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.7px;
+  color: #666;
+  margin: 32px 0 8px;
+}
+
+/* First label has no leading gap */
+.columns-contact > div > div:last-child h3:first-child {
+  margin-top: 0;
+}
+
+/* Right column: contact values (mailto / tel links, plain address) */
+.columns-contact > div > div:last-child p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+
+.columns-contact > div > div:last-child a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
   overflow-wrap: break-word;
 }
 
+/* Two-column grid on desktop */
 @media (width >= 900px) {
   .columns-contact > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
     align-items: start;
-    flex-direction: unset;
-    gap: 48px;
-  }
-
-  .columns-contact > div > div {
-    flex: 1;
-    order: unset;
   }
 }
