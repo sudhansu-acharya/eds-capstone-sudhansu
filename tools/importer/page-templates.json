@@ -219,6 +219,81 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "faq",
+      "urls": [
+        "https://wknd-trendsetters.site/faq"
+      ],
+      "coverageGaps": [],
+      "description": "FAQ page: hero, FAQ accordion, contact info columns, and join CTA",
+      "blocks": [
+        {
+          "name": "section-hero",
+          "instances": ["#main-content > header.section.secondary-section"],
+          "section": "secondary"
+        },
+        {
+          "name": "hero-blog",
+          "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": ["#main-content > section.section:nth-of-type(1) .faq-list"]
+        },
+        {
+          "name": "section-connect",
+          "instances": ["#main-content > section.section.secondary-section"],
+          "section": "secondary"
+        },
+        {
+          "name": "columns-contact",
+          "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"]
+        },
+        {
+          "name": "section-join",
+          "instances": ["#main-content > section.section.accent-section"],
+          "section": "accent"
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["hero-blog"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "FAQ accordion",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": ["accordion-faq"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Let's connect",
+          "selector": "#main-content > section.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["columns-contact"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Join CTA",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section h2",
+            "#main-content > section.section.accent-section p",
+            "#main-content > section.section.accent-section a"
+          ]
+        }
+      ]
     }
   ]
 }
