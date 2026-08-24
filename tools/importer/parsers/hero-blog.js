@@ -18,8 +18,15 @@ export default function parse(element, { document }) {
   // Title — source uses h1.h1-heading; allow other heading levels as fallback.
   const heading = element.querySelector('h1, h2, .h1-heading, [class*="heading"]');
 
-  // Subheading — source uses p.subheading.
-  const subheading = element.querySelector('p.subheading, p[class*="subheading"], p');
+  // Body paragraphs — source uses p.subheading plus optional additional body
+  // paragraphs (e.g. the FAQ hero has a second descriptive paragraph). Capture
+  // every paragraph in the text column so no copy is dropped. Exclude paragraphs
+  // that only wrap a CTA link (those are handled separately below). Backward-
+  // compatible: heroes with a single subheading paragraph are unaffected.
+  const paragraphs = Array.from(element.querySelectorAll('p')).filter((p) => {
+    const link = p.querySelector('a');
+    return !(link && p.textContent.trim() === link.textContent.trim());
+  });
 
   // CTAs — source wraps links in .button-group.
   const ctaLinks = Array.from(
@@ -36,11 +43,11 @@ export default function parse(element, { document }) {
   // Row 3: single cell holding all text content + CTAs
   const contentCell = [];
   if (heading) contentCell.push(heading);
-  if (subheading) contentCell.push(subheading);
+  contentCell.push(...paragraphs);
   contentCell.push(...ctaLinks);
 
   // Empty-block guard
-  if (!heading && !subheading && ctaLinks.length === 0 && !bgImage) {
+  if (!heading && paragraphs.length === 0 && ctaLinks.length === 0 && !bgImage) {
     element.replaceWith(...element.childNodes);
     return;
   }
