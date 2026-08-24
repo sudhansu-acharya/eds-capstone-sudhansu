@@ -1,0 +1,92 @@
+/* hero-article -- two-column article masthead (cover image + header text).
+   Used at the top of blog-article pages. Left: large rounded cover image.
+   Right: breadcrumbs, H1 title, author byline, date + read-time, category tag.
+   White page background comes from the section; this block styles only its
+   own content. Modeled on the hero-blog 2-column grid pattern. */
+
+.hero-article {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+/* --- Cover image --- */
+.hero-article picture {
+  display: block;
+  width: 100%;
+}
+
+.hero-article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* --- Header text column --- */
+.hero-article h1 {
+  margin: 16px 0 0;
+  font-family: syncopate, var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30.8px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.hero-article p {
+  margin: 8px 0 0;
+  font-family: "instrument sans", var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: #404040;
+}
+
+/* Breadcrumb / byline / meta rows: small, secondary text with inline links. */
+.hero-article a {
+  color: #404040;
+  text-decoration: none;
+}
+
+.hero-article a:hover {
+  text-decoration: underline;
+}
+
+/* --- Category tag pill (last short paragraph or standalone label) --- */
+.hero-article p:last-child {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: #e8ff4d;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Text-only fallback (no cover image) --- */
+.hero-article.no-image {
+  grid-template-columns: 1fr;
+}
+
+/* --- Desktop: side-by-side columns --- */
+@media (width >= 900px) {
+  .hero-article {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .hero-article h1 {
+    font-size: 48px;
+    line-height: 52.8px;
+    letter-spacing: -0.96px;
+  }
+}

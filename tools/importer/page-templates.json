@@ -109,46 +109,66 @@
       "blocks": [
         {
           "name": "section-hero",
-          "instances": ["#main-content > header.section.secondary-section"],
+          "instances": [
+            "#main-content > header.section.secondary-section"
+          ],
           "section": "secondary"
         },
         {
           "name": "hero-blog",
-          "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"]
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
         },
         {
           "name": "columns-featured",
-          "instances": ["#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"]
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
         },
         {
           "name": "section-gallery",
-          "instances": ["#main-content > section.section.secondary-section:nth-of-type(2)"],
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(2)"
+          ],
           "section": "secondary"
         },
         {
           "name": "cards-gallery",
-          "instances": ["#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-sm"]
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-sm"
+          ]
         },
         {
           "name": "tabs-testimonial",
-          "instances": ["#main-content > section.section:nth-of-type(3) .tabs-wrapper"]
+          "instances": [
+            "#main-content > section.section:nth-of-type(3) .tabs-wrapper"
+          ]
         },
         {
           "name": "section-articles",
-          "instances": ["#main-content > section.section.secondary-section:nth-of-type(4)"],
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(4)"
+          ],
           "section": "secondary"
         },
         {
           "name": "cards-article",
-          "instances": ["#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-md"]
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.desktop-4-column.tablet-2-column-1.mobile-portrait-1-column.grid-gap-md"
+          ]
         },
         {
           "name": "accordion-faq",
-          "instances": ["#main-content > section.section:nth-of-type(5) .faq-list"]
+          "instances": [
+            "#main-content > section.section:nth-of-type(5) .faq-list"
+          ]
         },
         {
           "name": "hero-cta",
-          "instances": ["#main-content > section.section.inverse-section .grid-layout.desktop-1-column"],
+          "instances": [
+            "#main-content > section.section.inverse-section .grid-layout.desktop-1-column"
+          ],
           "section": "inverse"
         }
       ],
@@ -158,7 +178,9 @@
           "name": "Hero",
           "selector": "#main-content > header.section.secondary-section",
           "style": "secondary",
-          "blocks": ["hero-blog"],
+          "blocks": [
+            "hero-blog"
+          ],
           "defaultContent": []
         },
         {
@@ -166,7 +188,9 @@
           "name": "Featured case study",
           "selector": "#main-content > section.section:nth-of-type(1)",
           "style": null,
-          "blocks": ["columns-featured"],
+          "blocks": [
+            "columns-featured"
+          ],
           "defaultContent": []
         },
         {
@@ -174,7 +198,9 @@
           "name": "Image gallery",
           "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
           "style": "secondary",
-          "blocks": ["cards-gallery"],
+          "blocks": [
+            "cards-gallery"
+          ],
           "defaultContent": [
             "#main-content > section.section.secondary-section:nth-of-type(2) h2",
             "#main-content > section.section.secondary-section:nth-of-type(2) .utility-text-align-center p"
@@ -185,7 +211,9 @@
           "name": "Testimonials",
           "selector": "#main-content > section.section:nth-of-type(3)",
           "style": null,
-          "blocks": ["tabs-testimonial"],
+          "blocks": [
+            "tabs-testimonial"
+          ],
           "defaultContent": []
         },
         {
@@ -193,7 +221,9 @@
           "name": "Latest articles",
           "selector": "#main-content > section.section.secondary-section:nth-of-type(4)",
           "style": "secondary",
-          "blocks": ["cards-article"],
+          "blocks": [
+            "cards-article"
+          ],
           "defaultContent": [
             "#main-content > section.section.secondary-section:nth-of-type(4) h2",
             "#main-content > section.section.secondary-section:nth-of-type(4) .utility-text-align-center p"
@@ -204,7 +234,9 @@
           "name": "FAQ",
           "selector": "#main-content > section.section:nth-of-type(5)",
           "style": null,
-          "blocks": ["accordion-faq"],
+          "blocks": [
+            "accordion-faq"
+          ],
           "defaultContent": [
             "#main-content > section.section:nth-of-type(5) h2",
             "#main-content > section.section:nth-of-type(5) .subheading"
@@ -215,7 +247,9 @@
           "name": "Case study CTA",
           "selector": "#main-content > section.section.inverse-section",
           "style": "inverse",
-          "blocks": ["hero-cta"],
+          "blocks": [
+            "hero-cta"
+          ],
           "defaultContent": []
         }
       ]
@@ -230,29 +264,41 @@
       "blocks": [
         {
           "name": "section-hero",
-          "instances": ["#main-content > header.section.secondary-section"],
+          "instances": [
+            "#main-content > header.section.secondary-section"
+          ],
           "section": "secondary"
         },
         {
           "name": "hero-blog",
-          "instances": ["#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"]
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
         },
         {
           "name": "accordion-faq",
-          "instances": ["#main-content > section.section:nth-of-type(1) .faq-list"]
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .faq-list"
+          ]
         },
         {
           "name": "section-connect",
-          "instances": ["#main-content > section.section.secondary-section"],
+          "instances": [
+            "#main-content > section.section.secondary-section"
+          ],
           "section": "secondary"
         },
         {
           "name": "columns-contact",
-          "instances": ["#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"]
+          "instances": [
+            "#main-content > section.section.secondary-section .grid-layout.grid-gap-xxl"
+          ]
         },
         {
           "name": "section-join",
-          "instances": ["#main-content > section.section.accent-section"],
+          "instances": [
+            "#main-content > section.section.accent-section"
+          ],
           "section": "accent"
         }
       ],
@@ -262,7 +308,9 @@
           "name": "Hero",
           "selector": "#main-content > header.section.secondary-section",
           "style": "secondary",
-          "blocks": ["hero-blog"],
+          "blocks": [
+            "hero-blog"
+          ],
           "defaultContent": []
         },
         {
@@ -270,7 +318,9 @@
           "name": "FAQ accordion",
           "selector": "#main-content > section.section:nth-of-type(1)",
           "style": null,
-          "blocks": ["accordion-faq"],
+          "blocks": [
+            "accordion-faq"
+          ],
           "defaultContent": []
         },
         {
@@ -278,7 +328,9 @@
           "name": "Let's connect",
           "selector": "#main-content > section.section.secondary-section",
           "style": "secondary",
-          "blocks": ["columns-contact"],
+          "blocks": [
+            "columns-contact"
+          ],
           "defaultContent": []
         },
         {
@@ -294,6 +346,90 @@
           ]
         }
       ]
+    },
+    {
+      "name": "landing-page",
+      "urls": [
+        "https://wknd-trendsetters.site/",
+        "https://wknd-trendsetters.site/fashion-trends-of-the-season",
+        "https://wknd-trendsetters.site/fashion-trends-young-adults"
+      ],
+      "coverageGaps": [],
+      "description": "Landing page with hero, feature sections, and CTA blocks",
+      "blocks": []
+    },
+    {
+      "name": "content-listing",
+      "urls": [
+        "https://wknd-trendsetters.site/blog",
+        "https://wknd-trendsetters.site/case-studies",
+        "https://wknd-trendsetters.site/fashion-insights"
+      ],
+      "coverageGaps": [],
+      "description": "Listing page with intro header and a grid of content cards",
+      "blocks": []
+    },
+    {
+      "name": "blog-article",
+      "urls": [
+        "https://wknd-trendsetters.site/blog/ace-pro-court-polo",
+        "https://wknd-trendsetters.site/blog/fashion-blog-post",
+        "https://wknd-trendsetters.site/blog/fashion-trends-young-culture",
+        "https://wknd-trendsetters.site/blog/fashion-trends-young-style",
+        "https://wknd-trendsetters.site/blog/flip-flop-summer-style",
+        "https://wknd-trendsetters.site/blog/latest-trends-young-casual-fashion",
+        "https://wknd-trendsetters.site/blog/street-style-trends"
+      ],
+      "coverageGaps": [],
+      "description": "Article detail page with hero, body content, and related sections",
+      "blocks": [
+        {
+          "name": "hero-article",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.grid-gap-lg"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article header",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "hero-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Article body",
+          "selector": "#main-content > section.section:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section:nth-of-type(2) .blog-content"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "faq-page",
+      "urls": [
+        "https://wknd-trendsetters.site/faq"
+      ],
+      "coverageGaps": [],
+      "description": "FAQ page with hero, accordion, contact columns, and CTA",
+      "blocks": []
+    },
+    {
+      "name": "article-detail",
+      "urls": [
+        "https://wknd-trendsetters.site/fashion-trends-young-adults-casual-sport"
+      ],
+      "coverageGaps": [],
+      "description": "Standalone article/trend detail page",
+      "blocks": []
     }
   ]
 }
