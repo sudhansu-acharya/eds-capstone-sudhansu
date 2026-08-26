@@ -1,0 +1,51 @@
+.logos {
+  overflow: hidden;
+}
+
+.logos .logos-track {
+  display: flex;
+  width: max-content;
+}
+
+.logos ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 48px;
+}
+
+.logos li {
+  flex: none;
+  padding: 0 24px;
+}
+
+.logos img {
+  display: block;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logos li:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+@media (width >= 900px) {
+  .logos .logos-track {
+    animation: logos-scroll 30s linear infinite;
+  }
+
+  .logos:hover .logos-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes logos-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}

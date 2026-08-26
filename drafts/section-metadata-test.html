@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Section Metadata Test</title>
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h2>Regular section</h2>
+        <p>This section has no metadata and should keep the default background.</p>
+      </div>
+      <div>
+        <h2>Highlighted section</h2>
+        <p>This section should render with a light-grey background.</p>
+        <div class="section-metadata">
+          <div><div>Style</div><div>light</div></div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
