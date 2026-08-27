@@ -1,0 +1,11 @@
+{
+  "total": 4,
+  "offset": 0,
+  "limit": 4,
+  "data": [
+    { "name": "Alex Rivera", "title": "Engineering Lead", "department": "Engineering" },
+    { "name": "Priya Nair", "title": "Product Designer", "department": "Design" },
+    { "name": "Sam Okafor", "title": "Marketing Manager", "department": "Marketing" },
+    { "name": "Jamie Chen", "title": "Support Specialist", "department": "Customer Success" }
+  ]
+}
