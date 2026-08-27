@@ -1,4 +1,5 @@
 {
+  "editUrlPattern": "https://da.live/canvas#/{{org}}/{{site}}{{pathname}}",
   "plugins": [
     {
       "id": "quick-edit",
